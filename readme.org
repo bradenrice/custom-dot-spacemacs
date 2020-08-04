@@ -1,0 +1,51 @@
+#+title:Readme
+#+author:Braden Rice
+For now, I only have instructions for Windows assuming that your have winget
+installed. I may add instructions for other operating systems later but they all
+invlove just using a package manager for git and emacs, set your home directory
+if necessary, and then use git to clone spacemacs into the .emacs.d folder and
+the spacemacs settings into the .spacemacs.d folder.
+
+The instructions would work on OSx with Homebrew or on Linux with the distro's
+package manager (like apt for Ubuntu).
+* Setup
+** git
+Install git for your operating system
+*** Windows
+#+begin_src sh
+winget install Git.Git
+#+end_src
+** Emacs
+Install emacs for your operating system.
+#+begin_src sh
+winget install GNU.Emacs
+#+end_src
+#+begin_comment
+DO NOT OPEN EMACS!
+
+If you do open emacs then make sure that you delete the .emacs.d folder that it
+creates when you open it.
+#+end_comment
+** Spacemacs
+Clone the spacemacs repository into the .emacs.d directory
+#+begin_src sh
+git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
+#+end_src
+#+begin_comment
+YOU ARE STILL NOT READY TO RUN EMACS!
+
+If you do open emacs then make sure that you delete the .spacemacs file that it
+creates when you open it.
+#+end_comment
+** Spacemacs config
+Clone the custome spacemacs configuration repository into the .spacemacs.d
+directory.
+#+begin_src sh
+git clone https://github.com/bradenrice/custom-dot-spacemacs.git .spacemacs.d
+#+end_src
+#+begin_comment
+Now you are ready to open it. 
+
+When you open it for the first time, it will need to download a lot of packages
+depending on the contents of the custom configuration file that you use.
+#+end_comment
